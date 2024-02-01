@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <defs>
+        <style>
+            .cls-2{fill:#6964e2}
+        </style>
+    </defs>
+    <g id="Group_16360" data-name="Group 16360" transform="translate(-1882 -300)">
+        <path id="Rectangle_5422" data-name="Rectangle 5422" transform="translate(1882 300)" style="fill:none" d="M0 0h24v24H0z"/>
+        <g id="Group_16359" data-name="Group 16359" transform="translate(-20 -5.76)">
+            <g id="Group_11521" data-name="Group 11521" transform="translate(1905 307.76)">
+                <circle id="Ellipse_488" data-name="Ellipse 488" class="cls-2" cx="4" cy="4" r="4" transform="translate(2.771)"/>
+                <path id="Path_18411" data-name="Path 18411" class="cls-2" d="M23.673 48.337v-2.4a4.676 4.676 0 0 0-.538-2.152C21.912 41.783 19.32 41 16.337 41s-5.576.783-6.75 2.788A4.063 4.063 0 0 0 9 45.94v2.4z" transform="translate(-9 -31)"/>
+            </g>
+            <circle id="Ellipse_587" data-name="Ellipse 587" cx="5" cy="5" r="5" transform="translate(1913 317.76)" style="fill:#06064d"/>
+            <path id="Path_19936" data-name="Path 19936" d="m1912 319.725 1.8 1.442 3.266-3.557" transform="translate(3.368 3.263)" style="stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.4px;fill:none"/>
+        </g>
+    </g>
+</svg>

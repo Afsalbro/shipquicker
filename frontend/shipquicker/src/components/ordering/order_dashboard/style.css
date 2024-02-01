@@ -1,0 +1,24 @@
+.dashboard{
+    margin-left: 100px;
+    padding-top: 100px;
+}
+
+
+.dashborad_navbar{
+    display: flex;
+    justify-content: space-between;
+}
+
+.dashborad_navbar button{
+    padding: 6px;
+    height: 40px;
+    margin: 20px 10px;
+    color: white;
+    background-color: black;
+}
+
+.add_order_from_tabel_ship{
+    background: black;
+    color: white;
+    padding: 5px;
+}

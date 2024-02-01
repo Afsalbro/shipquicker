@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="56" height="56">
+    <defs>
+        <style>
+            .cls-3{fill:#01A0A9}
+        </style>
+    </defs>
+    <g id="Group_15843" data-name="Group 15843" transform="translate(2474 -1880)">
+        <g id="Group_15936" data-name="Group 15936">
+            <circle id="Ellipse_462" data-name="Ellipse 462" cx="28" cy="28" r="28" transform="translate(-2474 1880)" style="fill:#fff"/>
+            <path id="Path_19656" data-name="Path 19656" d="M66.657 14.132z" transform="translate(-2491.88 1869.996)" style="fill:#01A0A9"/>
+            <g id="Group_15940" data-name="Group 15940" transform="translate(-.09 2)">
+                <g id="_3631712_cash_money_wallet_icon" data-name="3631712_cash_money_wallet_icon" transform="translate(-2462.91 1888)">
+                    <path id="Path_19652" data-name="Path 19652" class="cls-3" d="M37.573 32.4H11V21a1.538 1.538 0 0 1 1.127-1.494L35.4 11.88a1.583 1.583 0 0 1 2.094 1.494V32.4z" transform="translate(-11 -10.591)"/>
+                    <g id="Group_15841" data-name="Group 15841" transform="translate(5.605)">
+                        <g id="Group_15839" data-name="Group 15839">
+                            <ellipse id="Ellipse_541" data-name="Ellipse 541" cx="8.135" cy="7.715" rx="8.135" ry="7.715" style="stroke:#01A0A9;fill:#fff"/>
+                        </g>
+                    </g>
+                    <path id="Path_19654" data-name="Path 19654" d="M13.024 49.092h30.357A1.6 1.6 0 0 0 45 47.517V27.043a1.6 1.6 0 0 0-1.619-1.575H13.024A1.977 1.977 0 0 1 11 23.5v23.623a1.977 1.977 0 0 0 2.024 1.969z" transform="translate(-11 -13.092)" style="fill:#01A0A9"/>
+                    <path id="Path_19655" data-name="Path 19655" class="cls-3" d="M47.416 43.217h4.026V38.5h-4.026A2.345 2.345 0 0 0 45 40.859a2.345 2.345 0 0 0 2.416 2.358z" transform="translate(-17.442 -16.27)"/>
+                </g>
+                <text id="_" data-name="`" transform="translate(-2450.859 1897.844)" style="font-size:8px;font-family:RupeeForadian,Rupee Foradian;letter-spacing:.02em;fill:#03846f"><tspan x="0" y="0">`</tspan></text>
+            </g>
+        </g>
+    </g>
+</svg>
