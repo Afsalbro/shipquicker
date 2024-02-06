@@ -1,32 +1,81 @@
-.login{
+body {
+    background: #E5E5E5;
+    font-family: 'Roboto', sans-serif;
+}
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card {
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 900px;
     width: 100%;
+}
+.card-left {
+    background: white;
+    padding: 50px;
     display: flex;
-    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+}
+.card-right {
+    background: #2F80ED;
+    padding: 50px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.card-right img {
+    max-width: 100%;
+    height: auto;
+}
+.google-btn {
+    background: #12229d;
+    color: white;
+    border: none;
+    /* border-radius: 5px; */
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.google-btn i {
+    margin-right: 10px;
+}
+.login-form {
+    margin-top: 20px;
+}
+.login-form input {
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    width: 100%;
+    border: 1px solid #BDBDBD;
+}
+.login-form button {
+    background: #12229d;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+}
+.login-form button i {
+    font-size: 24px;
+}
+.login-footer {
+    margin-top: 20px;
+    font-size: 14px;
     text-align: center;
-    height: 90vh;
-    background-image: url('./login-bg.jpg');
-    background-size: cover;
 }
-
-.o_auth{
-    display: flex;
-    width: 90%;
-    margin: 0 auto;
-    justify-content: space-between;
-}
-
-.auth_ span{
-    margin-left: 10px;
-}
-
-.login-form{
-    background: white;    
-    border-radius: 10px;
-    padding: 20px;
-    width: 30%;
-    margin: 200px auto;
-}
-
-.login-head{
-    font-size: 25px;
+.login-footer a {
+    color: #2F80ED;
+    text-decoration: none;
 }

@@ -540,8 +540,8 @@ export default function AddOrders() {
   };
 
   return (
-    <div className="container mt-3" style={{ marginTop: "7%" }}>
-      <Card>
+    <div className="container mt-3" style={{ marginTop: "7%",paddingLeft:'10%' }}>
+      <Card style={{padding:'40px',marginBottom:'5%'}}>
         <Card.Body>
           <Form onSubmit={() => {}}>
             <Row>

@@ -7,9 +7,8 @@ import { CardHeader } from '@mui/material';
 
 export default function kyc() {
   return (
-    <div className="container mt-3" style={{marginTop:'7%'}}>
-        
-      <Card>
+    <div className="container mt-3" style={{marginTop:'7%',marginBottom:'5%'}}>    
+      <Card style={{padding:'40px'}}>
         <Card.Header style={{fontSize:'x-large'}}>Profile and Company Details</Card.Header>
         <Card.Body>
           <Card.Title>Company Basic Info</Card.Title>

@@ -62,7 +62,7 @@ const Orders = () => {
   };
 
   const ActionButton = () => (
-    <Button className="btn btn-primary" onClick={handleOpenModal}>
+    <Button className="btn btn-primary" onClick={handleOpenModal} style={{fontSize:'10px'}}>
       Ship Now
     </Button>
   );
@@ -170,8 +170,8 @@ const Orders = () => {
   );
 
   return (
-    <div className="container mt-3" style={{ marginTop: "7%" }}>
-      <Card>
+    <div className="container mt-3" style={{ marginTop: "7%",marginBottom:'5%' }}>
+      <Card style={{padding:'40px',maxWidth:'100%'}}>
         {/* <Card.Header style={{ fontSize: "x-large" }}>Orders</Card.Header> */}
         <Card.Body>
           <DataTable

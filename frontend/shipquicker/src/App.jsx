@@ -71,9 +71,10 @@ const App = () => {
         </span> */}
       <Router>
         
-        <Navigation isLogin={isLogin} setLogin={setLogin} />
+        
           {isLogin == true ? (
             <>
+            <Navigation isLogin={isLogin} setLogin={setLogin} />
               <Sidebar />
               <Routes>
                 <Route path="/services" element={<ServicesProviders />} />
@@ -86,13 +87,14 @@ const App = () => {
                 <Route path="/add_orders" element={<AddOrders />} />
 
               </Routes>
+              <Contact data={landingPageData.Contact} />
             </>
           ) : (
             <>
               <Routes>
-                <Route path="/" element={<LandingPage/>} />
+                {/* <Route path="/" element={<LandingPage/>} /> */}
                 <Route path="/login" element={<Login setLogin={setLogin}/>} />
-                <Route path="/register" element={<Register setLogin={setLogin} />} />
+                <Route path="/" element={<Register setLogin={setLogin} />} />
                 <Route path="/profile" element={<Profile />} />
               </Routes>
             </>
@@ -100,7 +102,7 @@ const App = () => {
 
       </Router>
       
-      <Contact data={landingPageData.Contact} />
+      
     </div>
   );
 };

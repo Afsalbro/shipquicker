@@ -1,0 +1,57 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #E5E5E5;
+  color: #333;
+}
+.container {
+  max-width: 1200px;
+}
+.card {
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  background-color: #fff;
+  /* padding: 40px; */
+}
+.form-control {
+  border-radius: 10px;
+}
+.btn-primary {
+  background-color:#12229d;
+  border: none;
+  /* border-radius: 20px; */
+  padding: 10px 24px;
+  font-size: 18px;
+}
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+.form-text {
+  display: block;
+  margin-top: .25rem;
+  color: #6c757d;
+}
+.brand-logos img {
+  /* max-height: 40px;
+  margin-right: 10px; */
+}
+.check-list {
+  list-style: none;
+  padding-left: 0;
+}
+.check-list li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 10px;
+}
+.check-list li::before {
+  content: '\f00c';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: -2px;
+  color: #28a745;
+}
+.text-highlight {
+  color: #007bff;
+}

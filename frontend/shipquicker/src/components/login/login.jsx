@@ -16,6 +16,8 @@ import {
 import googlePNG from "../../images/google.png";
 import facebookPNG from "../../images/facebook.png";
 import txtPNG from "../../images/phone_no.png";
+import Courier from "../../images/courier.jpg";
+
 import { Button, FormLabel } from "react-bootstrap";
 
 function Login({ setLogin }) {
@@ -74,7 +76,7 @@ function Login({ setLogin }) {
     //             <span>Phone No</span>
     //         </div>
     //     </div>
-    //     <h1 className='login-head'>Login | ShipQuicker</h1>
+    //     <h1 className='login-head'>Login | ShipquickrQuicker</h1>
     //     <br></br>
     //         <input className='form-control' type={"text"} placeholder={"Enter Your Username"} value={username} onChange={(e)=> onChangeUsername(e)} />
     //         <br></br>
@@ -95,116 +97,58 @@ function Login({ setLogin }) {
     //         <></>
     //     )}
     // </div>
-    <MDBContainer
-      fluid
-      className="p-3 my-5 h-custom"
-      style={{ paddingTop: "100px" }}
-    >
-      <MDBRow>
-        <MDBCol col="10" md="6">
-          <img
-            src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
-            class="img-fluid"
-            alt="Sample image"
-          />
-        </MDBCol>
-
-        <MDBCol col="4" md="4" style={{ marginTop: "10%" }}>
-          <div className="d-flex flex-row align-items-center justify-content-center">
-            <p className="lead fw-normal mb-0 me-3">Sign in with</p>
-
-            <div className="row">
-              <div className="col-md-6">
-                <Button
-                  className="mb-2 w-100"
-                  size="lg"
-                  style={{
-                    color: "black",
-                    backgroundColor: "white",
-                    transition: "background-color 0.3s ease",
-                  }}
-                  onMouseOver={(e) => (e.target.style.backgroundColor = "red")}
-                  onMouseOut={(e) => (e.target.style.backgroundColor = "white")}
-                >
-                  <img height={"25px"} src={googlePNG} alt="Google Logo" />
-                  Sign in with Google
-                </Button>
-              </div>
-              <div className="col-md-6">
-                <Button
-                  className="mb-2 w-100"
-                  size="lg"
-                  style={{
-                    color: "black",
-                    backgroundColor: "white",
-                    transition: "background-color 0.3s ease",
-                    // marginLeft: "7%",
-                  }}
-                  onMouseOver={(e) =>
-                    (e.target.style.backgroundColor = "#1b77f2")
-                  }
-                  onMouseOut={(e) => (e.target.style.backgroundColor = "white")}
-                >
-                  <img height={"25px"} src={facebookPNG} alt="Shopify Logo" />
-                Sign in with Facebook
-                </Button>
-              </div>
+    <div class="login-container" style={{fontFamily:'circular'}}>
+      <div class="card">
+        <div class="row">
+          <div class="col-md-6 card-left" style={{textAlign:"center",paddingBottom:'14%'}}>
+            <h2>Shipquickr</h2>
+            <button class="google-btn">
+              <i class="bi bi-google"></i>
+              Sign in with google
+            </button>
+            <div class="text-center">or</div>
+            <div class="login-form" style={{textAlign:'center'}}>
+              <h5>Sign Up OR Login with Username / Mobile Number / Email ID</h5>
+              <input
+                placeholder="Username"
+                type="text"
+                value={username} onChange={(e)=> onChangeUsername(e)}
+              />
+              <input
+                placeholder="Password"
+                type="password"
+                value={password} onChange={(e)=> onChangePassword(e)}
+              />
+              <button type="submit" onClick={(e)=>submitLogin(e)}>
+                <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+            <div class="login-footer">
+              <p>
+                Don't have an account?
+                <Link to="/">Click Here</Link>
+              </p>
+              <p>
+                Have queries? Please mail us at
+                <a href="mailto:business@Shipquickryaari.com">
+                  business@Shipquickr.com
+                </a>
+              </p>
             </div>
           </div>
-
-          <div className="divider d-flex align-items-center my-4">
-            <p className="text-center fw-bold mx-3 mb-0">Or</p>
+          <div class="col-md-6 card-right" style={{paddingBottom:'19%'}}>
+            <h2>Want to deliver items fast?</h2>
+            <h1>Think Shipquickr Logistics</h1>
+            <img
+              alt="Illustration of a delivery person riding a scooter with a map and location markers in the background"
+              height="300"
+              src={Courier}
+              width="500"
+            />
           </div>
-
-          <FormLabel>User Name</FormLabel>
-          <MDBInput
-            wrapperClass="mb-5"
-            id="formControlLg"
-            type="email"
-            size="md"
-            value={username}
-            onChange={(e)=> onChangeUsername(e)}
-          />
-
-          <FormLabel>Password</FormLabel>
-          <MDBInput
-            wrapperClass="mb-4"
-            id="formControlLg"
-            type="password"
-            size="md"
-            value={password} onChange={(e)=> onChangePassword(e)}
-          />
-
-          <div
-            className="d-flex justify-content-between mb-4"
-            style={{ textAlign: "end" }}
-          >
-            <a href="!#">Forgot password?</a>
-          </div>
-
-          <div className="text-center text-md-start mt-4 pt-2">
-            <Button
-              className="mb-0 px-5"
-              size="lg"
-              style={{ backgroundColor: "black" }}
-              onClick={(e)=>submitLogin(e)}
-            >
-              Login
-            </Button>
-            <p className="small fw-bold mt-2 pt-1 mb-2">
-              Don't have an account?{" "}
-              <Link
-                to="/register"
-                style={{ textAlign: "center", color: "blue" }}
-              >
-                {" "}
-                Register{" "}
-              </Link>
-            </p>
-          </div>
-        </MDBCol>
-      </MDBRow>
-    </MDBContainer>
+        </div>
+      </div>
+    </div>
   );
 }
 

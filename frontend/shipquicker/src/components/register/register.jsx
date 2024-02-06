@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import api_url from "../../api_url/api_url.js";
 import axios from "axios";
-// import './style.css';
+import "./style.css";
 import {
   MDBContainer,
   MDBCol,
@@ -16,6 +16,10 @@ import {
 import googlePNG from "../../images/google.png";
 import facebookPNG from "../../images/facebook.png";
 import shopify from "../../images/shopify.png";
+import tick from "../../images/tick.png";
+import trust from "../../images/trusted-by.png";
+
+
 import { Button, FormLabel } from "react-bootstrap";
 
 function Register({ setLogin }) {
@@ -60,7 +64,7 @@ function Register({ setLogin }) {
 
   return (
     // <div className='login'>
-    //         <h1 className='login-head'>Register | ShipQuicker</h1>
+    //         <h1 className='login-head'>Register | shipquickr</h1>
     //         <br></br>
     //         <div className='login-form form-group'>
     //             <input className='form-control' type={"text"} name="username" placeholder={"Enter Your Username"} value={FormValue.username} onChange={(e)=> handleChange(e)} />
@@ -84,149 +88,136 @@ function Register({ setLogin }) {
     //             <></>
     //         )}
     // </div>
-    <MDBContainer
-      fluid
-      className="p-3 my-5 h-custom"
-      style={{ paddingTop: "100px" }}
+    <div
+      class="container d-flex align-items-center justify-content-center"
+      style={{ minheight: "100%",paddingTop:'4%',fontFamily:'circular' }}
     >
-      <MDBRow>
-        <MDBCol col="10" md="6">
+      <div class="row w-100">
+        <div class="col-lg-6 d-flex align-items-center justify-content-center">
+          <div class="card" style={{padding:'40px'}}>
+            <h2 style={{color:'#004EFF'}}>Shipquickr</h2>
+            <p>All Logistics. One API.</p>
+            <form>
+              <div class="mb-3">
+                <input
+                  class="form-control"
+                  placeholder="First Name*"
+                  required=""
+                  type="text"
+                  style={{marginBottom:'2%',borderRadius:'0px'}}
+                  value={FormValue.username} onChange={(e)=> handleChange(e)}
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  class="form-control"
+                  placeholder="Last Name*"
+                  required=""
+                  type="text"
+                  style={{marginBottom:'2%',borderRadius:'0px'}}
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  class="form-control"
+                  placeholder="Company Name*"
+                  required=""
+                  type="text"
+                  style={{marginBottom:'2%',borderRadius:'0px'}}
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  class="form-control"
+                  placeholder="Email*"
+                  required=""
+                  type="email"
+                  style={{marginBottom:'2%',borderRadius:'0px'}}
+                  value={FormValue.email} onChange={(e)=> handleChange(e)}
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  class="form-control"
+                  placeholder="Password*"
+                  required=""
+                  type="password"
+                  style={{marginBottom:'2%',borderRadius:'0px'}}
+                  value={FormValue.password} onChange={(e)=> handleChange(e)}
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  class="form-control"
+                  placeholder="Confirm Password*"
+                  required=""
+                  type="password"
+                  style={{marginBottom:'2%',borderRadius:'0px'}}
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  class="form-control"
+                  placeholder="Mobile Number*"
+                  required=""
+                  type="text"
+                  style={{marginBottom:'2%',borderRadius:'0px'}}
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  class="form-control"
+                  placeholder="Referral Code (Optional)"
+                  type="text"
+                  style={{marginBottom:'2%',borderRadius:'0px'}}
+                />
+              </div>
+              <div class="d-grid">
+                <button class="btn btn-primary" type="submit" style={{width:'100%'}} onClick={(e)=>handleSubmit(e)}>
+                SignUp
+                <i class="bi bi-arrow-right"></i>
+                </button>
+              </div>
+              <p class="form-text">
+                Already have an account?
+                <Link to="/login">Click Here</Link>
+              </p>
+            </form>
+          </div>
+        </div>
+        <div class="col-lg-6 text-center">
+          <h1>Ship Smarter, <span style={{color:'#004EFF'}}>Ship Faster </span></h1>
+          <p>Fast and Easy Shipping from your doorstep to your customer's.</p>
+          {/* <ul class="check-list"> */}
+          <div>
           <img
-            src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
-            class="img-fluid"
-            alt="Sample image"
-          />
-        </MDBCol>
-
-        <MDBCol col="4" md="4" style={{ marginTop: "7%" }}>
-          <div className="d-flex flex-row align-items-center justify-content-center">
-            <p className="lead fw-normal mb-0 me-3">Sign Up with</p>
-
-            <div className="row">
-              <div className="col-md-6">
-                <Button
-                  className="mb-2 w-100"
-                  size="lg"
-                  style={{
-                    color: "black",
-                    backgroundColor: "white",
-                    transition: "background-color 0.3s ease",
-                  }}
-                  onMouseOver={(e) => (e.target.style.backgroundColor = "red")}
-                  onMouseOut={(e) => (e.target.style.backgroundColor = "white")}
-                >
-                  <img height={"25px"} src={googlePNG} alt="Google Logo" />
-                  Sign in with Google
-                </Button>
-              </div>
-              <div className="col-md-6">
-                <Button
-                  className="mb-2 w-100"
-                  size="lg"
-                  style={{
-                    color: "black",
-                    backgroundColor: "white",
-                    transition: "background-color 0.3s ease",
-                    // marginLeft: "7%",
-                  }}
-                  onMouseOver={(e) =>
-                    (e.target.style.backgroundColor = "#1b77f2")
-                  }
-                  onMouseOut={(e) => (e.target.style.backgroundColor = "white")}
-                >
-                  <img height={"25px"} src={facebookPNG} alt="Shopify Logo" />
-                  Sign in with Facebook
-                </Button>
-              </div>
-            </div>
+              alt="BYJU'S logo placeholder"
+              src={tick}
+              style={{width:'5%',height:'5%'}}
+            />96%* RTO reduction <br/>
+           <img
+              alt="BYJU'S logo placeholder"
+              src={tick}
+              style={{width:'5%',height:'5%'}}
+            />99.6%* Highest delivery ratio <br/>
+           <img
+              alt="BYJU'S logo placeholder"
+              src={tick}
+              style={{width:'5%',height:'5%'}}
+            />98.5%* On-time order pick-up <br/>
+          {/* </ul> */}
           </div>
-
-          <div className="divider d-flex align-items-center my-4">
-            <p className="text-center fw-bold mx-3 mb-0">Or</p>
+          
+          <div class="brand-logos">
+            {/* <img
+              alt="BYJU'S logo placeholder"
+              src={trust}
+              style={{width:'70%',height:'30%'}}
+            /> */}
           </div>
-          <div className="row">
-            <div className="col-md-6">
-              <FormLabel>User Name</FormLabel>
-              <MDBInput
-                wrapperClass="mb-7"
-                id="formControlLgName"
-                type="text"
-                size="md"
-                value={FormValue.username} onChange={(e)=> handleChange(e)}
-              />
-            </div>
-            <div className="col-md-6">
-              <FormLabel>Email address</FormLabel>
-              <MDBInput
-                wrapperClass="mb-5"
-                id="formControlLgEmail"
-                type="email"
-                size="md"
-                value={FormValue.email} onChange={(e)=> handleChange(e)}
-              />
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-md-6">
-              <FormLabel>Contact Number</FormLabel>
-              <MDBInput
-                wrapperClass="mb-5"
-                id="formControlLgContact"
-                type="text"
-                size="md"
-              />
-            </div>
-            <div className="col-md-6">
-              <FormLabel>Password</FormLabel>
-              <MDBInput
-                wrapperClass="mb-4"
-                id="formControlLgPassword"
-                type="password"
-                size="md"
-                value={FormValue.password} onChange={(e)=> handleChange(e)}
-              />
-            </div>
-          </div>
-          <FormLabel>Company Name (Optional)</FormLabel>
-          <MDBInput
-            wrapperClass="mb-5"
-            // label="Company Name (Optional)"
-            id="formControlLg"
-            type="text"
-            size="md"
-          />
-
-          {/* <div
-            className="d-flex justify-content-between mb-4"
-            style={{ textAlign: "end" }}
-          >
-            <a href="!#">Forgot password?</a>
-          </div> */}
-
-          <div
-            className="text-center text-md-start mt-4 pt-2"
-            style={{ marginTop: "5%" }}
-          >
-            <Button
-              className="mb-0 px-5"
-              size="lg"
-              style={{ backgroundColor: "black" }}
-              onClick={(e)=>handleSubmit(e)}
-            >
-              Register
-            </Button>
-            <p className="small fw-bold mt-2 pt-1 mb-2">
-              Don't have an account?{" "}
-              <Link to="/login" style={{ textAlign: "center", color: "blue" }}>
-                {" "}
-                Login{" "}
-              </Link>
-            </p>
-          </div>
-        </MDBCol>
-      </MDBRow>
-      
-    </MDBContainer>
+        </div>
+      </div>
+    </div>
   );
 }
 
