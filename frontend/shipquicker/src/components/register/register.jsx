@@ -19,7 +19,6 @@ import shopify from "../../images/shopify.png";
 import tick from "../../images/tick.png";
 import trust from "../../images/trusted-by.png";
 
-
 import { Button, FormLabel } from "react-bootstrap";
 
 function Register({ setLogin }) {
@@ -88,136 +87,129 @@ function Register({ setLogin }) {
     //             <></>
     //         )}
     // </div>
-    <div
-      class="container d-flex align-items-center justify-content-center"
-      style={{ minheight: "100%",paddingTop:'4%',fontFamily:'circular' }}
-    >
-      <div class="row w-100">
-        <div class="col-lg-6 d-flex align-items-center justify-content-center">
-          <div class="card" style={{padding:'40px'}}>
-            <h2 style={{color:'#004EFF'}}>Shipquickr</h2>
-            <p>All Logistics. One API.</p>
-            <form>
-              <div class="mb-3">
-                <input
-                  class="form-control"
-                  placeholder="First Name*"
-                  required=""
-                  type="text"
-                  style={{marginBottom:'2%',borderRadius:'0px'}}
-                  value={FormValue.username} onChange={(e)=> handleChange(e)}
-                />
-              </div>
-              <div class="mb-3">
-                <input
-                  class="form-control"
-                  placeholder="Last Name*"
-                  required=""
-                  type="text"
-                  style={{marginBottom:'2%',borderRadius:'0px'}}
-                />
-              </div>
-              <div class="mb-3">
-                <input
-                  class="form-control"
-                  placeholder="Company Name*"
-                  required=""
-                  type="text"
-                  style={{marginBottom:'2%',borderRadius:'0px'}}
-                />
-              </div>
-              <div class="mb-3">
-                <input
-                  class="form-control"
-                  placeholder="Email*"
-                  required=""
-                  type="email"
-                  style={{marginBottom:'2%',borderRadius:'0px'}}
-                  value={FormValue.email} onChange={(e)=> handleChange(e)}
-                />
-              </div>
-              <div class="mb-3">
-                <input
-                  class="form-control"
-                  placeholder="Password*"
-                  required=""
-                  type="password"
-                  style={{marginBottom:'2%',borderRadius:'0px'}}
-                  value={FormValue.password} onChange={(e)=> handleChange(e)}
-                />
-              </div>
-              <div class="mb-3">
-                <input
-                  class="form-control"
-                  placeholder="Confirm Password*"
-                  required=""
-                  type="password"
-                  style={{marginBottom:'2%',borderRadius:'0px'}}
-                />
-              </div>
-              <div class="mb-3">
-                <input
-                  class="form-control"
-                  placeholder="Mobile Number*"
-                  required=""
-                  type="text"
-                  style={{marginBottom:'2%',borderRadius:'0px'}}
-                />
-              </div>
-              <div class="mb-3">
-                <input
-                  class="form-control"
-                  placeholder="Referral Code (Optional)"
-                  type="text"
-                  style={{marginBottom:'2%',borderRadius:'0px'}}
-                />
-              </div>
-              <div class="d-grid">
-                <button class="btn btn-primary" type="submit" style={{width:'100%'}} onClick={(e)=>handleSubmit(e)}>
+    <div className="container d-flex align-items-center justify-content-center" style={{ minHeight: "100%", paddingTop: '4%', fontFamily: 'circular' }}>
+    <div className="row w-100">
+      <div className="col-lg-6 d-flex align-items-center justify-content-center">
+        <div className="card" style={{ padding: '40px' }}>
+          <h2 style={{ color: '#004EFF' }}>Shipquickr</h2>
+          <p>All Logistics. One API.</p>
+          <form onSubmit={handleSubmit}>
+            <div className="mb-3">
+              <input
+                className="form-control"
+                placeholder="First Name*"
+                type="text"
+                style={{ marginBottom: '2%', borderRadius: '0px' }}
+                name="username"
+                value={FormValue.username}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="mb-3">
+              <input
+                className="form-control"
+                placeholder="Last Name*"
+                type="text"
+                style={{ marginBottom: '2%', borderRadius: '0px' }}
+              />
+            </div>
+            <div className="mb-3">
+              <input
+                className="form-control"
+                placeholder="Company Name*"
+                type="text"
+                style={{ marginBottom: '2%', borderRadius: '0px' }}
+              />
+            </div>
+            <div className="mb-3">
+              <input
+                className="form-control"
+                placeholder="Email*"
+                type="email"
+                style={{ marginBottom: '2%', borderRadius: '0px' }}
+                name="email"
+                value={FormValue.email}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="mb-3">
+              <input
+                className="form-control"
+                placeholder="Password*"
+                type="password"
+                style={{ marginBottom: '2%', borderRadius: '0px' }}
+                name="password"
+                value={FormValue.password}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="mb-3">
+              <input
+                className="form-control"
+                placeholder="Confirm Password*"
+                type="password"
+                style={{ marginBottom: '2%', borderRadius: '0px' }}
+              />
+            </div>
+            <div className="mb-3">
+              <input
+                className="form-control"
+                placeholder="Mobile Number*"
+                type="text"
+                style={{ marginBottom: '2%', borderRadius: '0px' }}
+              />
+            </div>
+            <div className="mb-3">
+              <input
+                className="form-control"
+                placeholder="Referral Code (Optional)"
+                type="text"
+                style={{ marginBottom: '2%', borderRadius: '0px' }}
+              />
+            </div>
+            <div className="d-grid">
+              <button className="btn btn-primary" type="submit" style={{ width: '100%' }} onClick={handleSubmit}>
                 SignUp
-                <i class="bi bi-arrow-right"></i>
-                </button>
-              </div>
-              <p class="form-text">
-                Already have an account?
-                <Link to="/login">Click Here</Link>
-              </p>
-            </form>
-          </div>
+                <i className="bi bi-arrow-right"></i>
+              </button>
+            </div>
+            <p className="form-text">
+              Already have an account?
+              <Link to="/login">Click Here</Link>
+            </p>
+          </form>
         </div>
-        <div class="col-lg-6 text-center">
-          <h1>Ship Smarter, <span style={{color:'#004EFF'}}>Ship Faster </span></h1>
-          <p>Fast and Easy Shipping from your doorstep to your customer's.</p>
-          {/* <ul class="check-list"> */}
-          <div>
+      </div>
+      <div className="col-lg-6 text-center">
+        <h1>Ship Smarter, <span style={{ color: '#004EFF' }}>Ship Faster </span></h1>
+        <p>Fast and Easy Shipping from your doorstep to your customer's.</p>
+        <div>
           <img
-              alt="BYJU'S logo placeholder"
-              src={tick}
-              style={{width:'5%',height:'5%'}}
-            />96%* RTO reduction <br/>
-           <img
-              alt="BYJU'S logo placeholder"
-              src={tick}
-              style={{width:'5%',height:'5%'}}
-            />99.6%* Highest delivery ratio <br/>
-           <img
-              alt="BYJU'S logo placeholder"
-              src={tick}
-              style={{width:'5%',height:'5%'}}
-            />98.5%* On-time order pick-up <br/>
-          {/* </ul> */}
-          </div>
-          
-          <div class="brand-logos">
-            {/* <img
-              alt="BYJU'S logo placeholder"
-              src={trust}
-              style={{width:'70%',height:'30%'}}
-            /> */}
-          </div>
+            alt="BYJU'S logo placeholder"
+            src={tick}
+            style={{ width: '5%', height: '5%' }}
+          />96%* RTO reduction <br />
+          <img
+            alt="BYJU'S logo placeholder"
+            src={tick}
+            style={{ width: '5%', height: '5%' }}
+          />99.6%* Highest delivery ratio <br />
+          <img
+            alt="BYJU'S logo placeholder"
+            src={tick}
+            style={{ width: '5%', height: '5%' }}
+          />98.5%* On-time order pick-up <br />
+        </div>
+        <div className="brand-logos">
+          {/* <img
+            alt="BYJU'S logo placeholder"
+            src={trust}
+            style={{ width: '70%', height: '30%' }}
+          /> */}
         </div>
       </div>
     </div>
+  </div>
   );
 }
 

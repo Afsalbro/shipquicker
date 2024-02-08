@@ -97,29 +97,34 @@ function Login({ setLogin }) {
     //         <></>
     //     )}
     // </div>
-    <div class="login-container" style={{fontFamily:'circular'}}>
+    <div class="login-container" style={{ fontFamily: "circular" }}>
       <div class="card">
         <div class="row">
-          <div class="col-md-6 card-left" style={{textAlign:"center",paddingBottom:'14%'}}>
+          <div
+            class="col-md-6 card-left"
+            style={{ textAlign: "center", paddingBottom: "14%" }}
+          >
             <h2>Shipquickr</h2>
             <button class="google-btn">
               <i class="bi bi-google"></i>
               Sign in with google
             </button>
             <div class="text-center">or</div>
-            <div class="login-form" style={{textAlign:'center'}}>
+            <div class="login-form" style={{ textAlign: "center" }}>
               <h5>Sign Up OR Login with Username / Mobile Number / Email ID</h5>
               <input
                 placeholder="Username"
                 type="text"
-                value={username} onChange={(e)=> onChangeUsername(e)}
+                value={username}
+                onChange={(e) => onChangeUsername(e)}
               />
               <input
                 placeholder="Password"
                 type="password"
-                value={password} onChange={(e)=> onChangePassword(e)}
+                value={password}
+                onChange={(e) => onChangePassword(e)}
               />
-              <button type="submit" onClick={(e)=>submitLogin(e)}>
+              <button type="submit" onClick={(e) => submitLogin(e)}>
                 <i class="bi bi-arrow-right"></i>
               </button>
             </div>
@@ -136,7 +141,7 @@ function Login({ setLogin }) {
               </p>
             </div>
           </div>
-          <div class="col-md-6 card-right" style={{paddingBottom:'19%'}}>
+          <div class="col-md-6 card-right" style={{ paddingBottom: "19%" }}>
             <h2>Want to deliver items fast?</h2>
             <h1>Think Shipquickr Logistics</h1>
             <img
