@@ -37,7 +37,9 @@ function SelectOrderType() {
             your wallet
           </p>
           <br></br>
+          <Link to={"/recharge"}>
           <button>Recharge</button>
+          </Link>
         </div>
         <div className="selection_box">
           <img src={shiporderIMG}></img>

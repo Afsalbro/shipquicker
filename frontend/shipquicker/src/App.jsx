@@ -25,6 +25,7 @@ import Kyc from "./components/kyc/kyc";
 import Orders from "./components/orders/orders";
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import AddOrders from "./components/orders/add_orders/addOrders";
+import Recharge from "./recharge/recharge";
 
 
 
@@ -85,7 +86,7 @@ const App = () => {
                 <Route path="/kyc" element={<Kyc />} />
                 <Route path="/orders" element={<Orders />} />
                 <Route path="/add_orders" element={<AddOrders />} />
-
+                <Route path="/recharge" element={<Recharge />} />
               </Routes>
               <Contact data={landingPageData.Contact} />
             </>

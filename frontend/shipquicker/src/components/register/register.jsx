@@ -18,6 +18,7 @@ import facebookPNG from "../../images/facebook.png";
 import shopify from "../../images/shopify.png";
 import tick from "../../images/tick.png";
 import trust from "../../images/trusted-by.png";
+import Courier from "../../images/courier.jpg";
 
 import { Button, FormLabel } from "react-bootstrap";
 
@@ -87,129 +88,117 @@ function Register({ setLogin }) {
     //             <></>
     //         )}
     // </div>
-    <div className="container d-flex align-items-center justify-content-center" style={{ minHeight: "100%", paddingTop: '4%', fontFamily: 'circular' }}>
-    <div className="row w-100">
-      <div className="col-lg-6 d-flex align-items-center justify-content-center">
-        <div className="card" style={{ padding: '40px' }}>
-          <h2 style={{ color: '#004EFF' }}>Shipquickr</h2>
-          <p>All Logistics. One API.</p>
-          <form onSubmit={handleSubmit}>
-            <div className="mb-3">
+    <div class="login-container" style={{ fontFamily: "circular",paddingBottom:"1%",paddingTop:"1%" }}>
+      <div class="card">
+        <div class="row">
+          <div class="col-md-6 card-left" style={{ textAlign: "center" }}>
+            <h2>Shipquickr</h2>
+            <button class="google-btn">
+              <i class="bi bi-google"></i>
+              Sign In with Google
+            </button>
+            <div class="text-center">or</div>
+            <div class="login-form" style={{ textAlign: "center" }}>
+              <h5>Create an account with Shipquickr</h5>
               <input
                 className="form-control"
                 placeholder="First Name*"
                 type="text"
-                style={{ marginBottom: '2%', borderRadius: '0px' }}
                 name="username"
-                value={FormValue.username}
-                onChange={handleChange}
+                style={{ marginBottom: "2%", borderRadius: "0px" }}
+                value={FormValue.username} onChange={(e)=> handleChange(e)}
               />
-            </div>
-            <div className="mb-3">
               <input
                 className="form-control"
                 placeholder="Last Name*"
                 type="text"
-                style={{ marginBottom: '2%', borderRadius: '0px' }}
+                style={{ marginBottom: "2%", borderRadius: "0px" }}
               />
-            </div>
-            <div className="mb-3">
               <input
                 className="form-control"
                 placeholder="Company Name*"
                 type="text"
-                style={{ marginBottom: '2%', borderRadius: '0px' }}
+                style={{ marginBottom: "2%", borderRadius: "0px" }}
               />
-            </div>
-            <div className="mb-3">
               <input
                 className="form-control"
                 placeholder="Email*"
                 type="email"
-                style={{ marginBottom: '2%', borderRadius: '0px' }}
+                style={{ marginBottom: "2%", borderRadius: "0px" }}
                 name="email"
-                value={FormValue.email}
-                onChange={handleChange}
+                value={FormValue.email} onChange={(e)=> handleChange(e)}
               />
-            </div>
-            <div className="mb-3">
               <input
                 className="form-control"
                 placeholder="Password*"
                 type="password"
-                style={{ marginBottom: '2%', borderRadius: '0px' }}
                 name="password"
-                value={FormValue.password}
-                onChange={handleChange}
+                style={{ marginBottom: "2%", borderRadius: "0px" }}
+                value={FormValue.password} onChange={(e)=> handleChange(e)}
               />
-            </div>
-            <div className="mb-3">
               <input
                 className="form-control"
                 placeholder="Confirm Password*"
                 type="password"
-                style={{ marginBottom: '2%', borderRadius: '0px' }}
+                style={{ marginBottom: "2%", borderRadius: "0px" }}
               />
-            </div>
-            <div className="mb-3">
               <input
                 className="form-control"
                 placeholder="Mobile Number*"
                 type="text"
-                style={{ marginBottom: '2%', borderRadius: '0px' }}
+                style={{ marginBottom: "2%", borderRadius: "0px" }}
               />
-            </div>
-            <div className="mb-3">
               <input
                 className="form-control"
                 placeholder="Referral Code (Optional)"
                 type="text"
-                style={{ marginBottom: '2%', borderRadius: '0px' }}
+                style={{ marginBottom: "2%", borderRadius: "0px" }}
               />
-            </div>
-            <div className="d-grid">
-              <button className="btn btn-primary" type="submit" style={{ width: '100%' }} onClick={handleSubmit}>
-                SignUp
-                <i className="bi bi-arrow-right"></i>
+              <button type="submit" onClick={(e)=>handleSubmit(e)}>
+                <i class="bi bi-arrow-right"></i>
               </button>
             </div>
-            <p className="form-text">
-              Already have an account?
-              <Link to="/login">Click Here</Link>
-            </p>
-          </form>
-        </div>
-      </div>
-      <div className="col-lg-6 text-center">
-        <h1>Ship Smarter, <span style={{ color: '#004EFF' }}>Ship Faster </span></h1>
-        <p>Fast and Easy Shipping from your doorstep to your customer's.</p>
-        <div>
-          <img
-            alt="BYJU'S logo placeholder"
-            src={tick}
-            style={{ width: '5%', height: '5%' }}
-          />96%* RTO reduction <br />
-          <img
-            alt="BYJU'S logo placeholder"
-            src={tick}
-            style={{ width: '5%', height: '5%' }}
-          />99.6%* Highest delivery ratio <br />
-          <img
-            alt="BYJU'S logo placeholder"
-            src={tick}
-            style={{ width: '5%', height: '5%' }}
-          />98.5%* On-time order pick-up <br />
-        </div>
-        <div className="brand-logos">
-          {/* <img
-            alt="BYJU'S logo placeholder"
-            src={trust}
-            style={{ width: '70%', height: '30%' }}
-          /> */}
+            <div class="login-footer">
+              <p>
+                Already have an account? <Link to="/login">Sign In</Link>
+              </p>
+              <p>
+                Have queries? Please mail us at
+                <a href="mailto:business@Shipquickryaari.com">
+                  business@Shipquickr.com
+                </a>
+              </p>
+            </div>
+          </div>
+          <div
+            class="col-md-6 card-right"
+            style={{ backgroundColor: "#2f80ed", minHeight: "115vh" }}
+          >
+            <h2>Want to deliver items fast?</h2>
+            <h1>Think Shipquickr Logistics</h1>
+            <img
+              alt="Illustration of a delivery person riding a scooter with a map and location markers in the background"
+              height="400"
+              src={Courier}
+              width="500"
+            />
+            <div style={{ marginBottom: "20px" }}>
+              <h3 style={{ fontSize: "1.2rem", marginBottom: "10px" }}>
+                Shipquickr Logistics: Your Trusted Partner in Swift, Secure, and
+                Seamless Deliveries.
+              </h3>
+              <p style={{ fontSize: "1rem", lineHeight: "1.6" }}>
+                With our dedication to efficiency and reliability, we ensure
+                your parcels reach their destination promptly and intact.
+                Experience the convenience of streamlined logistics with
+                Shipquickr. Let us handle your shipments, while you focus on
+                what truly matters. Shipquickr: Where speed meets reliability.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
   );
 }
 
